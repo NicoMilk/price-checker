@@ -3,13 +3,16 @@
   "name": "Price checker",
   "version": "1.0",
   "description": "Track specific products price on specific websites",
+  "icons": {
+    "48": "icon.png"
+  },
   "action": {
     "default_popup": "popup.html",
     "default_icon": "icon.png"
   },
   "permissions": ["storage", "scripting", "tabs"],
-  "host_permissions": ["<all_urls>"],
-  "icons": {
-    "48": "icon.png"
-  }
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": ["http://*/*", "https://*/*"]
 }
